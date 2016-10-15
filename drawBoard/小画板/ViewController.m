@@ -10,6 +10,9 @@
 #import "MyDrawBoard.h"
 #import "UIImage+rotation.h"
 
+/*
+ balalnalanalanalanalanlaank
+ */
 
 
 @interface ViewController ()<UINavigationBarDelegate,UIImagePickerControllerDelegate>
