@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1909" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-b1-uqV" customClass="MyDrawBoard">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhY-Ti-e8y">
+                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sB1-Qh-iO9">
+                                        <rect key="frame" x="34" y="8" width="64" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="wHV-I2-Yla"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="drawSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9bC-aA-lh2"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-nn-Qdh">
+                                        <rect key="frame" x="560" y="8" width="32" height="30"/>
+                                        <state key="normal" title="save"/>
+                                        <connections>
+                                            <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAa-W0-bAb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-FL-xbi">
+                                        <rect key="frame" x="111" y="12" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="cLX-g8-IJ6"/>
+                                            <constraint firstAttribute="height" constant="20" id="fnL-mt-dgd"/>
+                                        </constraints>
+                                        <state key="normal" image="Snip20160919_1"/>
+                                        <connections>
+                                            <action selector="rubberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="76L-Mq-JsO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJg-zT-Oz0">
+                                        <rect key="frame" x="8" y="12" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="r4i-Og-2AU"/>
+                                            <constraint firstAttribute="width" constant="20" id="vwz-XU-Ib2"/>
+                                        </constraints>
+                                        <state key="normal" image="Snip20160919_2"/>
+                                        <connections>
+                                            <action selector="drawAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIa-Dt-0Pi"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YvE-kE-kb1">
+                                        <rect key="frame" x="137" y="8" width="64" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="gug-8B-rbk"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="rubberSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="JJQ-QT-fqG"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKZ-k7-te7">
+                                        <rect key="frame" x="515" y="9.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="nRU-BY-kNp"/>
+                                            <constraint firstAttribute="width" constant="25" id="xUh-ZS-N8n"/>
+                                        </constraints>
+                                        <state key="normal" image="Snip20160919_10"/>
+                                        <connections>
+                                            <action selector="delete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mtA-jh-gJC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgA-fK-oX6">
+                                        <rect key="frame" x="470" y="9" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="4Lb-PG-W9d"/>
+                                            <constraint firstAttribute="height" constant="25" id="7ix-Bb-Tb8"/>
+                                        </constraints>
+                                        <state key="normal" image="Snip20160919_6"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsD-rd-wzE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="PJg-zT-Oz0" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="514-v3-mCg"/>
+                                    <constraint firstItem="YvE-kE-kb1" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="5ep-hy-sa7"/>
+                                    <constraint firstItem="YvE-kE-kb1" firstAttribute="leading" secondItem="Ecg-FL-xbi" secondAttribute="trailing" constant="8" id="86f-Cb-lgI"/>
+                                    <constraint firstItem="Ccr-nn-Qdh" firstAttribute="leading" secondItem="GKZ-k7-te7" secondAttribute="trailing" constant="20" id="CyN-Cb-6ma"/>
+                                    <constraint firstItem="PJg-zT-Oz0" firstAttribute="leading" secondItem="BhY-Ti-e8y" secondAttribute="leading" constant="8" id="FLX-pv-gdZ"/>
+                                    <constraint firstItem="Ecg-FL-xbi" firstAttribute="centerY" secondItem="BhY-Ti-e8y" secondAttribute="centerY" id="IHY-gw-hXK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ccr-nn-Qdh" secondAttribute="trailing" constant="8" id="Ifu-Ou-Who"/>
+                                    <constraint firstItem="PJg-zT-Oz0" firstAttribute="centerY" secondItem="BhY-Ti-e8y" secondAttribute="centerY" id="Ikw-HN-gZt"/>
+                                    <constraint firstItem="GKZ-k7-te7" firstAttribute="leading" secondItem="BgA-fK-oX6" secondAttribute="trailing" constant="20" id="O5h-FE-amu"/>
+                                    <constraint firstItem="Ecg-FL-xbi" firstAttribute="leading" secondItem="sB1-Qh-iO9" secondAttribute="trailing" constant="15" id="R0b-gy-BaA"/>
+                                    <constraint firstItem="Ecg-FL-xbi" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="YyE-GL-zZ1"/>
+                                    <constraint firstItem="sB1-Qh-iO9" firstAttribute="leading" secondItem="PJg-zT-Oz0" secondAttribute="trailing" constant="8" id="aA1-Ko-tgz"/>
+                                    <constraint firstItem="Ccr-nn-Qdh" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="aSw-0z-j1D"/>
+                                    <constraint firstItem="BgA-fK-oX6" firstAttribute="centerY" secondItem="BhY-Ti-e8y" secondAttribute="centerY" id="bSm-7D-lpB"/>
+                                    <constraint firstItem="BgA-fK-oX6" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="odb-aX-Gi2"/>
+                                    <constraint firstItem="sB1-Qh-iO9" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="tJZ-iF-7jq"/>
+                                    <constraint firstAttribute="height" constant="44" id="tPP-mF-0IV"/>
+                                    <constraint firstItem="GKZ-k7-te7" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="top" constant="8" id="trl-no-7Qp"/>
+                                    <constraint firstItem="GKZ-k7-te7" firstAttribute="centerY" secondItem="BhY-Ti-e8y" secondAttribute="centerY" id="vo7-kJ-8OV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="514-v3-mCg"/>
+                                        <exclude reference="YyE-GL-zZ1"/>
+                                        <exclude reference="odb-aX-Gi2"/>
+                                        <exclude reference="trl-no-7Qp"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeU-lA-OT5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="cHT-9f-8KG">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vAs-EW-U5M">
+                                            <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hy9-j1-5EP"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="41V-9Q-9mK"/>
+                                    <barButtonItem style="plain" id="jZH-wj-dxg">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7z0-nW-gSr">
+                                            <rect key="frame" x="126" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bp-ZI-uMV"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Y5T-J9-Pq4"/>
+                                    <barButtonItem style="plain" id="sia-yV-PhU">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wje-EV-RwK">
+                                            <rect key="frame" x="232" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdV-w2-cYf"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Llz-fG-gxj"/>
+                                    <barButtonItem style="plain" id="wh1-Hk-K9P">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kiv-EQ-ykI">
+                                            <rect key="frame" x="338" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Otz-jn-3iX"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BU3-XO-AoT"/>
+                                    <barButtonItem style="plain" id="zTW-CO-zL8">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Igz-vb-Wqx">
+                                            <rect key="frame" x="444" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqE-Ah-774"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LzX-MK-6MO"/>
+                                    <barButtonItem style="plain" id="rpA-6m-OcU">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xit-YX-AeK">
+                                            <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGm-TA-Jnq"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zq-4P-pag">
+                                <rect key="frame" x="0.0" y="468" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="Xma-1L-R9j">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VQg-pI-6mR">
+                                            <rect key="frame" x="20" y="12" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Snip20160919_3"/>
+                                            <connections>
+                                                <action selector="rectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvP-tc-ZW3"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="eWv-nb-qfA">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PBL-px-yna">
+                                            <rect key="frame" x="50" y="12" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Snip20160919_4"/>
+                                            <connections>
+                                                <action selector="ovalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMC-5N-faO"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="b8G-po-VjP">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jfg-rr-Yb2">
+                                            <rect key="frame" x="80" y="9.5" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Snip20160919_7"/>
+                                            <connections>
+                                                <action selector="albumAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYV-AF-RFn"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="g0M-Bw-aEB">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2bN-Jj-Jo3">
+                                            <rect key="frame" x="115" y="7" width="43" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="fasten"/>
+                                            <connections>
+                                                <action selector="fastenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="We1-Vi-u6m"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="60" style="plain" id="ZqZ-t2-NTZ">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="CyO-z1-vPp">
+                                            <rect key="frame" x="168" y="6.5" width="60" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="opacityAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nc3-E3-eQn"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="XDR-5q-WYI">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c7o-bP-VUF">
+                                            <rect key="frame" x="238" y="7" width="49" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="mosaic"/>
+                                            <connections>
+                                                <action selector="modeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJT-8I-oti"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="60" style="plain" id="L9y-U8-xf9">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="30" id="DV4-TA-dlE">
+                                            <rect key="frame" x="297" y="6.5" width="60" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="PdY-D7-WQS">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wo8-n1-Bd5">
+                                            <rect key="frame" x="367" y="7" width="37" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="clean"/>
+                                            <connections>
+                                                <action selector="cleanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2l-E2-CUc"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MkZ-b1-uqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H5s-Cv-mkq"/>
+                            <constraint firstItem="MkZ-b1-uqV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hzx-Es-TnF"/>
+                            <constraint firstAttribute="trailing" secondItem="HeU-lA-OT5" secondAttribute="trailing" id="R2b-GN-KVt"/>
+                            <constraint firstItem="8Zq-4P-pag" firstAttribute="top" secondItem="MkZ-b1-uqV" secondAttribute="bottom" id="Yx3-rY-D4X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HeU-lA-OT5" secondAttribute="bottom" id="aFa-v2-lOa"/>
+                            <constraint firstAttribute="trailing" secondItem="8Zq-4P-pag" secondAttribute="trailing" id="ara-rh-48E"/>
+                            <constraint firstItem="HeU-lA-OT5" firstAttribute="top" secondItem="BhY-Ti-e8y" secondAttribute="bottom" id="b4u-KJ-Ltr"/>
+                            <constraint firstItem="8Zq-4P-pag" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cIm-iJ-nTA"/>
+                            <constraint firstItem="BhY-Ti-e8y" firstAttribute="top" secondItem="8Zq-4P-pag" secondAttribute="bottom" id="f1D-m1-klk"/>
+                            <constraint firstItem="HeU-lA-OT5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fnR-uL-JcC"/>
+                            <constraint firstItem="BhY-Ti-e8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nsK-8D-bBA"/>
+                            <constraint firstAttribute="trailing" secondItem="BhY-Ti-e8y" secondAttribute="trailing" id="r3Z-m1-PT6"/>
+                            <constraint firstAttribute="trailing" secondItem="MkZ-b1-uqV" secondAttribute="trailing" id="x5V-Eg-egP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawSli" destination="sB1-Qh-iO9" id="lD9-J8-sg8"/>
+                        <outlet property="myDrawBoard" destination="MkZ-b1-uqV" id="BDE-ew-mKt"/>
+                        <outlet property="rubSli" destination="YvE-kE-kb1" id="J3w-tJ-bsv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Snip20160919_1" width="40" height="40"/>
+        <image name="Snip20160919_10" width="78" height="98"/>
+        <image name="Snip20160919_2" width="40" height="40"/>
+        <image name="Snip20160919_3" width="40" height="40"/>
+        <image name="Snip20160919_4" width="40" height="34"/>
+        <image name="Snip20160919_6" width="40" height="40"/>
+        <image name="Snip20160919_7" width="36" height="36"/>
+    </resources>
+</document>
