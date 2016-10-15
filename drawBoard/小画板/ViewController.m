@@ -32,6 +32,7 @@
      self.myDrawBoard.lineWidth = 5;
     
     _filterIndex = 0;
+    NSLog(@"哈哈");
 }
 #pragma mark - 画图
 
